@@ -1,4 +1,6 @@
-//Will create a file
+//Skylar Gayhart April 2020
+
+//Will create a file in the directory the given project is in
 
 import java.io.*;
 import java.lang.*;
@@ -18,11 +20,11 @@ public class createFile {
 		}
 	}
 	
-	public void addRecords() { //Adds strings to the file
+	public void addRecords() { //Adds strings to the file/Can be modified
 		
-		x.format("%s", "xxxxx \n");
+		x.format("%s", "xxxxx \n"); //String value
 		x.format("%s", "x ");
-		x.format("%d", 23);
+		x.format("%d", 23); //A number
 		x.format("%s", "x ");
 		x.format("%s", "hi ");
 		x.format("%s", "xx ");
