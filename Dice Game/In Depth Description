@@ -1,1 +1,9 @@
+===============================================================================================================================
+                                                Rolling Dice Game Program
+===============================================================================================================================
 
+Overview: In this program, the user will input two player's names. After that, the program will run a while loop until either
+Player 1 or 2 earns over 100 points. Player 1 starts and will only lose their turn if they roll a total of 12 or 2 for that 
+round of their turn. Rolling a 2 is called 'snake eyes' and the player will lose their turn but their total will also go to 0. 
+If a 12 is rolled, then the player will only lose their turn. The program will continue to go from player to player until one's 
+score is greater than 100. 
