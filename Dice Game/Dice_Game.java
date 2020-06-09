@@ -1,3 +1,7 @@
+//Skylar Gayhart May 2020
+
+//Will simulate a rolling dice game between two players
+
 import java.util.*;
 
 public class Dice_Game {
