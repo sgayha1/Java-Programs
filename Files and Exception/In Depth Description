@@ -1,1 +1,24 @@
+===============================================================================================================================
+                                                 Exceptions and Files Programs
+===============================================================================================================================
 
+Overview of Programs: These programs were created to implement the 'throws' command and try/catch. Version 2 of each exemplifies
+'throws FileNotFoundException' while the Version 1 works with try and catch. 
+
+Program 1:
+  The user is asked what the file name they want to open is called and then the program attempts to find the file. If it is not 
+  found, the version 1 program will catch that exception while version 2 will throw it. If the file opened successfuly, the 
+  program will read through the file and add all the numbers to a total while also adding 1 to the count per number. The while
+  loop will skip anything that is not an int value. The count and number will also be printed for each round. When there are no
+  ints left to read, the while loop will end and the average of all the numbers will be computed and rounded. If an int value is 
+  accounted for in a file, meaning there is at least one int value in the file, then the average and count will be printed. 
+  Otherwise, the user will be told there were no ints. The file will then be closed for security. 
+  
+Program 2:
+  The program creates an object for an already created file names input.txt. Then, a PrintStream object is created so that the 
+  program can write to the new object outputFile. The goal is to read the input.txt file and write all its even values into
+  output.txt (outputFile). A count is instantiated to keep track of how many integers are found. Then, while the inputFile has 
+  a next token, that token is assigned to the int num variable then an if statement chekcs if that number modulo 2 is 0, meaning 
+  it is even. If it is, the number is printed to the outputFile. Otherwise, it is skipped. Lastly, if the count is greater than 
+  1, meaning an integer was found, then the count is printed and the program will read from the output file. If not, the program 
+  will tell the user there were no integers. Lastly, the program will close both files.
