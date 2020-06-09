@@ -1,1 +1,15 @@
+===============================================================================================================================
+                                                 Hangman Game Program
+===============================================================================================================================
 
+Overview: This program is an interpretation of the popular game 'Hangman.' An array of words that will be chosen from is 
+instatiated first. Then, a word is chosen at random using Math.random times the length of the array to get an index value. Then 
+that index value is used to pick a word in the array. A new array is created using chars, translating the String into a char
+array. The user is asked for their name then welcomed with an explanation of the rules. Another char array is created, replacing
+each char value with a -, simulating the hangman puzzle for the user to guess. A while loop then runs, giving the user 8 wrong
+guesses until they lose the game. In the loop, the dashed array is displayed and the user is asked to guess a letter. The letter 
+is added to an array list called used_letters. Then a for loop checks to see if the guesses letter is present anywhere in the 
+chosen word. If it is present, the dash is changed to the letter and isTrue is changed to true, keeping track of if the user
+guessed correctly. If not, isTrue is false and the user's count is incremented by 1, showing they guessed wrong. Then the 
+guessed letters are displayed. Then it will check if the dashes array equals the wordtochar, meaning the user won. The loop 
+continues to run until the user runs out of guesses or guesses the word correctly. 
