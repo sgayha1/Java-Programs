@@ -145,7 +145,7 @@ public class Player {
 			System.out.println(score);
 	}
 	
-	public boolean isSolved()
+	public boolean getisSolved()
 	{
 		return isSolved;
 	}
