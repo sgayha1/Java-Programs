@@ -76,7 +76,7 @@ public class Main {
 					}
 					
 					//Checks if puzzle is solved
-					solved = p1.isSolved();	
+					solved = p1.getisSolved();	
 					System.out.println();
 					System.out.println(p1.toString());
 					System.out.println();
@@ -102,7 +102,7 @@ public class Main {
 						cp = p3;
 					}
 					
-					solved = p2.isSolved();
+					solved = p2.getisSolved();
 					System.out.println();
 					System.out.println(p2.toString());
 					System.out.println();
@@ -129,7 +129,7 @@ public class Main {
 						cp = p1;
 					}
 					
-					solved = p3.isSolved();	
+					solved = p3.getisSolved();	
 					System.out.println();
 					System.out.println(p3.toString());
 					System.out.println();
