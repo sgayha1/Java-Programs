@@ -1,1 +1,84 @@
+===============================================================================================================================
+                                                The Wheel of Fortune Game Program
+===============================================================================================================================
 
+Overview: The program is based off of the popular game show "The Wheel of Fortune." There are three classes, the main, Player, 
+and Game. The program has 3 players who are competing to try and guess the word/phrase picked from an array. 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Main class:
+  The program will create first welcome the users and then explain the rules of the game. Then, they will be prompted to type 
+  their names. After the 3 player's names are inputTed, a more personalized welcome is given to the users. The program then 
+  calls to the Game class (object g) to create the puzzle then display the puzzle as dashes. Then, player objects are created
+  using the names inputted previously. Another player called cp, standing for the current player, is also created to keep track of
+  whose turn it is. Cp starts as p1 (Player 1 object). Then, a while loop is entered that will break when the puzzle is solved. 
+  The player is prompted with 3 option, either to try and fully solve the puzzle, guess a letter, or buy a vowel. For guessing
+  a letter or buying a vowel, the player has to spin the wheel to obtain a point if they guess correctly. If the user guesses 
+  correctly, they can go again until they either spin a 0 (bankrupt) or guess a wrong letter. The game cycles through players 
+  until the loop is broken. 
+ 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+Player class:
+  There are 10 methods within the Player class disregarding the toString and the constructor:
+  
+  selectTurn(Game g) - This takes a game object in the parameter and has no return. It will display a menu listing what the 
+  player can do for their turn: solve, spin and guess, or buy a vowel. Then navigates to the next step, turn(Game g)
+  
+  turn(Game g) - This takes a game object in the parameter and has no return. It encompasses a switch that will depend on the 
+  choice made in the previous method, selectTurn(Game g). If the choice was 0, the player will be navigated the solve(g) method. 
+  If they chose 1, the player will be navigated to the spinWheel() method that returns a boolean x. If x is true, the program 
+  will break from the switch. Otherwise, the player will be navigated to guessLetter(g) then updateScore(g). If the player 
+  picks 2, the user will be directed to buyVowel(letter, g), then spinWheel(), then guessLetter(g), then updateScore(g). 
+  
+  spinWheel() - The points that can be earned will be randomly generated (0-10) by MATH.random. If the point = 0, the player 
+  loses their turn. Otherwise, the point value will be saved and then guessLetter(Game g) will run.
+  
+  guessletter(Game g) - The player will guess a letter, stored in guess. Guess will be converted to a char. Then, the method tests 
+  if the char is a vowel. If it is and the user has not bought a vowel, the user will have to input another letter. Otherwise,
+  the while loop will break. When the while loop ends, the player will either lose their turn or be able to continue if they
+  guess correctly. Then the used letter board will display with the char guessed added.
+  
+  solve(Game g) - The player is asked for their full guess and that is passed to checkSolve along with the player object. If
+  it is incorrect, the player loses their turn.
+  
+  buyVowel(char letter, Game g) - If the player has enough points (200), then they can buy a vowel. Their point value will be 
+  deduced by 200 points then they will be able to spin the wheel and guess their vowel. Otherwise, they will lose their turn 
+  and be told they do no have sufficient funds to buy a vowel. 
+  
+  updateScore(Game g) - This will update the score for the specific player object. Their score for the round will depend on 
+  how many instances the guessed letter appears in the phrase/word multiplied by the point value spun. For example, if the
+  player spun a 4 and there were 2 a's in the word, then the player would get 8 points added to their overall score. 
+
+  getisSolved() - Will return the boolean isSolved.
+	
+  getloseTurn() - Will return the boolean loseTurn.
+  
+  setTurn() - Will set loseTurn to false.
+  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Game class: 
+  There are 7 methods within the Game class disregarding the constructor.
+  
+  createPuzzle() - This method will create the puzzle that will be used throughout the game. It creates an array called 
+  dashes that will display dashes according to the word/phrase chosen's length.
+  
+  displayPuzzle() - This will display the dashes array to the players. 
+  
+  UsedLetters(char letter) - This will add the guesses letter to an array called letboard.
+
+  checkPuzzle(char guess) - This will check to see if the guess is equal to the specific index in the word/phrase. If it 
+  isnt present anywhere in the word/phrase, isRight will remain false and the player will lose their turn.
+  
+  checkSolve(String guess, String player) - The method takes the guess as a parameter and the specific player object 
+  guessing. This will check to see if the guess equals the puzzle. if so, the player wins and isSolved turns true, 
+  breaking the while loop in the main class.
+  
+  getCount() - Will return the count.
+	
+	getloseTurn() - Will return loseTurn
+  
+  
+  
