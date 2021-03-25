@@ -3,9 +3,6 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /*
- * COSC 237 Section 001
- * Skylar Gayhart
- * Due: Wednesday Septemeber 16th
  * Lab2_2
  * Description: Rewrite the previous program and make it work when the list is populated with values found in an input file.
  */ 
