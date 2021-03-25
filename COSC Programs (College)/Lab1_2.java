@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 /*
- * COSC 237 Section 001
- * Skylar Gayhart
- * Due: Wednesday Septemeber 9th
- * Lab1_2
  * Description: Draw an empty box of a character specified by the user using nested for loops. 
  * Box has same number of rows and columns (5 to 21) inputted by the user. 
  */ 
