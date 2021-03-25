@@ -1,8 +1,4 @@
 /*
- * COSC 237 Section 001
- * Skylar Gayhart
- * Due: Wednesday Septemeber 23rd
- * Lab3_1
  * Write a Java program to solve the following problem using 1-dim arrays. Given a 1-dim array, create
  * a second array that holds two copies of each value in the original array.
  */ 
