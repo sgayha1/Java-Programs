@@ -1,8 +1,4 @@
 /*
- * COSC 237 Section 001
- * Skylar Gayhart
- * Due: Wednesday Septemeber 9th
- * Lab1_1
  * Two Digit Game Play. Number has to be between 10-99 and has to be of type int and different digits
  */ 
 
