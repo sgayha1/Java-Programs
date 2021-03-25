@@ -1,9 +1,6 @@
 import java.util.*;
 
 /*
- * COSC 237 Section 001
- * Skylar Gayhart
- * Due: Wednesday Septemeber 16th
  * Lab2_1
  * Description: Write a Java program using the following methods for a 1-dim array (list)
  */ 
